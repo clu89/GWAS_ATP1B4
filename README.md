@@ -10,10 +10,13 @@ I.  GWAS.gds
 II. GENESIS_final_pheno.csv
 
 2. Statistical Analysis
+Caucasian participants were selected for the analysis. A null model was first generated to investigate the baseline effect on outcome variable by family variables. The summary of null model will be passed to statistical model with genentic variants to identify associated SNPs with ATP1B4 expression. The statistical model was further adjusted with age and sex to analyze potential confounding effect.
 
-I.  Empty model:
+    * Null model: 
+    ATP1B4 = β0 
 
-II. Full model
+    * Full model
+    ATP1B4 = β0 + β1 ∙ SNP + β2 ∙ age + β3 ∙ sex
 
 # Table of Contents
 - [Installation](#installation)
@@ -34,7 +37,14 @@ cd ("PWAS_UKB")
 install.packages("GENENSIS")
 ## Install other packages if necessary
 ```
+
 ## Usage
+
+```bash
+## Install R first
+Module load R
+Rscript PWAS_UKB.R
+```
 
 ## Features
 
